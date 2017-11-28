@@ -1,0 +1,87 @@
+{
+  "name": "Dimona",
+  "app_id": "dimona",
+  "color": "#07A5DA",
+  "description": {
+    "pt_BR": "A Dimona estampa a sua camiseta sob demanda, sem mínimo.",
+    "en": "Dimona is your brazilian t-shirt factory."
+    },
+  "website": "https://www.camisadimona.com.br",
+  "signup_url": "https://www.camisadimona.com.br/login",
+  "api_base_uri": {
+    "production": {
+            "uri": "https://www.camisadimona.com/api/pluga",
+            "label": "Produção",
+            "default": true
+        }
+  },
+  "authentication": {
+    "type": "basic_auth",
+    "type": "pass_through_header", 
+    "fields": [
+      {
+        "name": "api-key",
+        "label": "API Key (Dimona)",
+        "mapping": "api-key",
+        "prefix": "",
+        "type": "text",
+        "validations": [
+          {"name": "min_length", "value": 10}
+        ]
+      }
+    ],
+    "tutorial": {
+      "link": {
+        "pt_BR": "Onde encontrar o token da API da Dimona?",
+        "en": "Where to find Dimona API token?"
+      },
+      "steps": [
+        {
+          "title": {
+            "pt_BR": "Passo 1",
+            "en": "Step 1"
+          },
+          "content": {
+            "pt_BR": "Acesse <a href='https://www.camisadimona.com.br.com/login' target='_blank'>a página de login da Dimona</a> e entre com seu login e senha, caso ainda não esteja logado.",
+            "en": "Access <a href='https://www.camisadimona.com.br.com/login' target='_blank'>camisadimona.com.br</a> and log in using your username and password if you haven’t already done so."
+          },
+          "img_url": {
+            "pt_BR": "https://manage.pluga.co/images/token-steps/woocommerce/step1.png",
+            "en": "https://manage.pluga.co/images/token-steps/woocommerce/step1.png"
+          }
+        },
+        {
+          "title": {
+            "pt_BR": "Passo 2",
+            "en": "Step 2"
+          },
+          "content": {
+            "pt_BR": "No menu lateral no canto esquerdo, clique em <strong>Avançado</strong>.",
+            "en": "At left side menu, click in Avançado."
+          },
+          "img_url": {
+            "pt_BR": "https://manage.pluga.co/images/token-steps/woocommerce/step3.png",
+            "en": "https://manage.pluga.co/images/token-steps/woocommerce/step3.png"
+          }
+        },
+        {
+          "title": {
+            "pt_BR": "Passo 3",
+            "en": "Step 3"
+          },
+          "content": {
+            "pt_BR": "Nesta tela de API da Dimona, copie a API_KEY.",
+            "en": "Copy seller_key and seller_secret."
+          },
+          "img_url": {
+            "pt_BR": "https://manage.pluga.co/images/token-steps/woocommerce/step5.png",
+            "en": "https://manage.pluga.co/images/token-steps/woocommerce/step5.png"
+          }
+        }
+      ]
+    },
+    "ping_request": {
+        "method_name": "/ping"
+    }
+  }
+}
