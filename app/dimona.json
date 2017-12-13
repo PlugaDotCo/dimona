@@ -10,20 +10,18 @@
   "signup_url": "https://www.camisadimona.com.br/login",
   "api_base_uri": {
     "production": {
-            "uri": "https://www.camisadimona.com/api/pluga",
-            "label": "Produção",
-            "default": true
-        }
+      "uri": "https://camisadimona.com.br/api/pluga",
+      "label": "Produção",
+      "default": true
+    }
   },
   "authentication": {
-    "type": "basic_auth",
-    "type": "pass_through_header", 
+    "type": "pass_through_header",
     "fields": [
       {
         "name": "api-key",
         "label": "API Key (Dimona)",
         "mapping": "api-key",
-        "prefix": "",
         "type": "text",
         "validations": [
           {"name": "min_length", "value": 10}
@@ -81,7 +79,7 @@
       ]
     },
     "ping_request": {
-        "method_name": "/ping"
+      "method_name": "/ping"
     }
   }
 }

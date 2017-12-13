@@ -11,16 +11,27 @@
   "action_fields": {
     "fields": [
       {
+        "key": "order_id",
+        "name": { "pt_BR": "order_id", "en": "order_id" },
+        "description": {
+          "pt_BR": "ID do Pedido",
+          "en": "Order ID"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "integer"
+      },
+      {
         "key": "items",
         "name": { "pt_BR": "items", "en": "items" },
         "description": {
-            "pt_BR": "Os SKUS do Pedido",
+          "pt_BR": "Os SKUS do Pedido",
           "en": "Order Skus"
         },
         "required": true,
-        "visible": false,
-        "advanced": false,
-        "field_type": "array",
+        "visible": true,
+        "field_type": "custom",
         "data_type": "string"
       },
       {
@@ -34,9 +45,8 @@
           "en": "The person who will receive the package"
         },
         "required": true,
-        "visible": false,
-        "advanced": false,
-        "field_type": "string",
+        "visible": true,
+        "field_type": "custom",
         "data_type": "string"
       },
       {
@@ -50,9 +60,8 @@
           "en": "Street to deliver the package"
         },
         "required": true,
-        "visible": false,
-        "advanced": false,
-        "field_type": "string",
+        "visible": true,
+        "field_type": "custom",
         "data_type": "string"
       },
       {
@@ -66,11 +75,10 @@
           "en": "Building Number"
         },
         "required": true,
-        "visible": false,
-        "advanced": false,
-        "field_type": "string",
+        "visible": true,
+        "field_type": "custom",
         "data_type": "string"
-      },  
+      },
       {
         "key": "address.complement",
         "name": {
@@ -81,12 +89,10 @@
           "pt_BR": "Número da casa, apartamento, etc.",
           "en": "Building Number"
         },
-        "required": false,
-        "visible": false,
-        "advanced": false,
-        "field_type": "string",
+        "visible": true,
+        "field_type": "custom",
         "data_type": "string"
-      },  
+      },
       {
         "key": "address.neighborhood",
         "name": {
@@ -98,11 +104,10 @@
           "en": "neighborhood"
         },
         "required": true,
-        "visible": false,
-        "advanced": false,
-        "field_type": "string",
+        "visible": true,
+        "field_type": "custom",
         "data_type": "string"
-      },   
+      },
       {
         "key": "address.city",
         "name": {
@@ -114,32 +119,21 @@
           "en": "City"
         },
         "required": true,
-        "visible": false,
-        "advanced": false,
-        "field_type": "string",
+        "visible": true,
+        "field_type": "custom",
         "data_type": "string"
-      },              
+      },
       {
         "key": "address.state",
         "name": { "pt_BR": "Estado", "en": "State" },
         "description": {
-            "pt_BR": "Estado",
-          "en": "State?"
-        },
-        "label": {
           "pt_BR": "Selecione o Estado.",
           "en": "Select the State."
         },
         "required": true,
-        "visible": false,
-        "advanced": false,
-        "field_type": "dropdown",
-        "data_type": "string",
-                "list": {
-                    "type": "local",
-                    "data": [{"value":"AC","label":"Acre"},{"value":"AL","label":"Alagoas"},{"value":"AM","label":"Amazonas"},{"value":"AP","label":"Amapá"},{"value":"BA","label":"Bahia"},{"value":"CE","label":"Ceará"},{"value":"DF","label":"Distrito Federal"},{"value":"ES","label":"Espírito Santo"},{"value":"GO","label":"Goiás"},{"value":"MA","label":"Maranhão"},{"value":"MG","label":"Minas Gerais"},{"value":"MS","label":"Mato Grosso do Sul"},{"value":"MT","label":"Mato Grosso"},{"value":"PA","label":"Pará"},{"value":"PB","label":"Paraíba"},{"value":"PE","label":"Pernambuco"},{"value":"PI","label":"Piauí"},{"value":"PR","label":"Paraná"},{"value":"RJ","label":"Rio de Janeiro"},{"value":"RN","label":"Rio Grande do Norte"},{"value":"RO","label":"Rondônia"},{"value":"RR","label":"Roraima"},{"value":"RS","label":"Rio Grande do Sul"},{"value":"SC","label":"Santa Catarina"},{"value":"SE","label":"Sergipe"},{"value":"SP","label":"São Paulo"},{"value":"TO","label":"Tocantins"}]
-                },
-        "placeholder": { "pt_BR": "-", "en": "-" }
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
       },
       {
         "key": "address.zipcode",
@@ -152,40 +146,26 @@
           "en": "zipcode"
         },
         "required": true,
-        "visible": false,
-        "advanced": false,
-        "field_type": "string",
+        "visible": true,
+        "field_type": "custom",
         "data_type": "string"
-      }, 
+      },
       {
         "key": "shipping_speed",
-        "name": { "pt_BR": "Velocidade de Transporte", "en": "Delivery Speed" },
+        "name": { "pt_BR": "Sedex ou PAC?", "en": "Express or Economic?" },
         "description": {
-            "pt_BR": "Sedex ou PAC?",
-          "en": "Express or Economic?"
-        },
-        "label": {
           "pt_BR": "Selecione o tipo. Se não escolher, vamos enviar na mais barata.",
           "en": "Select the type. If you don't choose, we will select the cheaper one."
         },
-        "required": false,
-        "visible": false,
-        "advanced": false,
-        "field_type": "dropdown",
-        "data_type": "string",
-                "list": {
-                    "type": "local",
-                    "data": [
-                        { "label": "Sedex", "value": "sedex" },
-                        { "label": "Pac", "value": "pac" }
-                      ]
-                },
-        "placeholder": { "pt_BR": "-", "en": "-" }
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
       }
     ]
   },
   "request": {
     "method_name": "/order",
-    "json_api": true
+    "json_api": true,
+    "error_fields": ["error", "message"]
   }
 }
