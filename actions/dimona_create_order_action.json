@@ -23,6 +23,21 @@
         "data_type": "integer"
       },
       {
+        "key": "customer_name",
+        "name": {
+          "pt_BR": "Nome do Cliente",
+          "en": "Customer name"
+        },
+        "description": {
+          "pt_BR": "A pessoa que efetuou o pedido.",
+          "en": "The person who placed the order"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
         "key": "address.name",
         "name": {
           "pt_BR": "Nome do Cliente",
@@ -139,17 +154,6 @@
         "data_type": "string"
       },
       {
-        "key": "shipping_speed",
-        "name": { "pt_BR": "Sedex ou PAC?", "en": "Express or Economic?" },
-        "description": {
-          "pt_BR": "Selecione o tipo. Se não escolher, vamos enviar na mais barata.",
-          "en": "Select the type. If you don't choose, we will select the cheaper one."
-        },
-        "visible": true,
-        "field_type": "custom",
-        "data_type": "string"
-      },
-      {
         "key": "items",
         "name": { "pt_BR": "itens", "en": "items" },
         "description": {
@@ -163,6 +167,6 @@
   "request": {
     "method_name": "/order",
     "json_api": true,
-    "error_fields": ["error", "message"]
+    "error_fields": ["errors"]
   }
 }
