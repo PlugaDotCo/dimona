@@ -29,21 +29,6 @@
           "en": "Customer name"
         },
         "description": {
-          "pt_BR": "A pessoa que efetuou o pedido.",
-          "en": "The person who placed the order"
-        },
-        "required": true,
-        "visible": true,
-        "field_type": "custom",
-        "data_type": "string"
-      },
-      {
-        "key": "address.name",
-        "name": {
-          "pt_BR": "Nome do Cliente",
-          "en": "Customer name"
-        },
-        "description": {
           "pt_BR": "A pessoa que vai receber o pedido.",
           "en": "The person who will receive the package"
         },
