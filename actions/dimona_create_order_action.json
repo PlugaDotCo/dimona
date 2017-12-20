@@ -1,0 +1,157 @@
+{
+  "name": {
+    "pt_BR": "criar um novo pedido na Dimona",
+    "en": "create a new order in Dimona"
+  },
+  "action_key": "create_order",
+  "description": {
+    "pt_BR": "criar um novo pedido na Dimona",
+    "en": "create a new order in Dimona"
+  },
+  "action_fields": {
+    "fields": [
+      {
+        "key": "order_id",
+        "name": { "pt_BR": "order_id", "en": "order_id" },
+        "description": {
+          "pt_BR": "ID do Pedido",
+          "en": "Order ID"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "integer"
+      },
+      {
+        "key": "customer_name",
+        "name": {
+          "pt_BR": "Nome do Cliente",
+          "en": "Customer name"
+        },
+        "description": {
+          "pt_BR": "A pessoa que vai receber o pedido.",
+          "en": "The person who will receive the package"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "address.street",
+        "name": {
+          "pt_BR": "Logradouro do cliente",
+          "en": "Customer street"
+        },
+        "description": {
+          "pt_BR": "Logradouro de entrega do pedido.",
+          "en": "Street to deliver the package"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "address.number",
+        "name": {
+          "pt_BR": "Número do endereço do cliente",
+          "en": "Customer building number"
+        },
+        "description": {
+          "pt_BR": "Número da casa, apartamento, etc.",
+          "en": "Building Number"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "address.complement",
+        "name": {
+          "pt_BR": "Complemento do endereço do cliente",
+          "en": "Customer complement number"
+        },
+        "description": {
+          "pt_BR": "Número da casa, apartamento, etc.",
+          "en": "Building Number"
+        },
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "address.neighborhood",
+        "name": {
+          "pt_BR": "Bairro",
+          "en": "Neighborhood"
+        },
+        "description": {
+          "pt_BR": "Bairro",
+          "en": "neighborhood"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "address.city",
+        "name": {
+          "pt_BR": "Cidade",
+          "en": "City"
+        },
+        "description": {
+          "pt_BR": "Cidade",
+          "en": "City"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "address.state",
+        "name": { "pt_BR": "Estado", "en": "State" },
+        "description": {
+          "pt_BR": "Selecione o Estado.",
+          "en": "Select the State."
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "address.zipcode",
+        "name": {
+          "pt_BR": "CEP",
+          "en": "zipcode"
+        },
+        "description": {
+          "pt_BR": "CEP",
+          "en": "zipcode"
+        },
+        "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "items",
+        "name": { "pt_BR": "itens", "en": "items" },
+        "description": {
+          "pt_BR": "Itens do Pedido",
+          "en": "Order Items"
+        },
+        "field_type": "array"
+      }
+    ]
+  },
+  "request": {
+    "method_name": "/order",
+    "json_api": true,
+    "error_fields": ["errors"]
+  }
+}
