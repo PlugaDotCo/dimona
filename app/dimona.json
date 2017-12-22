@@ -42,12 +42,12 @@
             "en": "Step 1"
           },
           "content": {
-            "pt_BR": "Acesse <a href='https://www.camisadimona.com.br.com/login' target='_blank'>a página de login da Dimona</a> e entre com seu login e senha, caso ainda não esteja logado.",
-            "en": "Access <a href='https://www.camisadimona.com.br.com/login' target='_blank'>camisadimona.com.br</a> and log in using your username and password if you haven’t already done so."
+            "pt_BR": "Acesse <a href='https://camisadimona.com.br/loja/conta' target='_blank'>a sua conta no site da Dimona</a> e entre com seu login e senha, caso ainda não esteja logado.",
+            "en": "Access <a href='https://camisadimona.com.br/loja/conta' target='_blank'>camisadimona.com.br</a> and log in using your username and password if you haven’t already done so."
           },
           "img_url": {
-            "pt_BR": "https://manage.pluga.co/images/token-steps/woocommerce/step1.png",
-            "en": "https://manage.pluga.co/images/token-steps/woocommerce/step1.png"
+            "pt_BR": "https://dimona.s3.amazonaws.com/pluga/step1.png",
+            "en": "https://dimona.s3.amazonaws.com/pluga/step1.png"
           }
         },
         {
@@ -60,8 +60,8 @@
             "en": "At left side menu, click in Avançado."
           },
           "img_url": {
-            "pt_BR": "https://manage.pluga.co/images/token-steps/woocommerce/step3.png",
-            "en": "https://manage.pluga.co/images/token-steps/woocommerce/step3.png"
+            "pt_BR": "https://dimona.s3.amazonaws.com/pluga/step2.png",
+            "en": "https://dimona.s3.amazonaws.com/pluga/step2.png"
           }
         },
         {
@@ -74,8 +74,8 @@
             "en": "Copy seller_key and seller_secret."
           },
           "img_url": {
-            "pt_BR": "https://manage.pluga.co/images/token-steps/woocommerce/step5.png",
-            "en": "https://manage.pluga.co/images/token-steps/woocommerce/step5.png"
+            "pt_BR": "https://dimona.s3.amazonaws.com/pluga/step3.png",
+            "en": "https://dimona.s3.amazonaws.com/pluga/step3.png"
           }
         }
       ]
