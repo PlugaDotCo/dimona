@@ -25,14 +25,29 @@
       {
         "key": "customer_name",
         "name": {
-          "pt_BR": "Nome do Cliente",
+          "pt_BR": "Nome do cliente",
           "en": "Customer name"
         },
         "description": {
-          "pt_BR": "A pessoa que vai receber o pedido.",
+          "pt_BR": "A pessoa que vai receber o pedido",
           "en": "The person who will receive the package"
         },
         "required": true,
+        "visible": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
+        "key": "customer_document",
+        "name": {
+          "pt_BR": "CPF/Cnpj do cliente",
+          "en": "Customer document"
+        },
+        "description": {
+          "pt_BR": "Documento da pessoa que vai receber o pedido",
+          "en": "The document of person who will receive the package"
+        },
+        "required": false,
         "visible": true,
         "field_type": "custom",
         "data_type": "string"
