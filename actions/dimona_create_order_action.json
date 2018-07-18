@@ -154,6 +154,22 @@
         "data_type": "string"
       },
       {
+        "key": "shipping_speed",
+        "name": {
+          "pt_BR": "Método de entrega",
+          "en": "Shipping method"
+        },
+        "description": {
+          "pt_BR": "Método de entrega",
+          "en": "Shipping method"
+        },
+        "required": false,
+        "visible": true,
+        "advanced": true,
+        "field_type": "custom",
+        "data_type": "string"
+      },
+      {
         "key": "items",
         "name": { "pt_BR": "itens", "en": "items" },
         "description": {
